@@ -1,7 +1,7 @@
 @section('titulo')
     - Registrarse
 @endsection
-<x-guest-layout>
+<x-app-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -65,4 +65,4 @@
                 {{ __('Iniciar Session') }}
             </x-primary-button>
     </x-auth-card>
-</x-guest-layout>
+</x-app-layout>

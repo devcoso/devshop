@@ -1,7 +1,7 @@
 @section('titulo')
     - Recuperar Password
 @endsection
-<x-guest-layout>
+<x-app-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -41,4 +41,4 @@
             </x-primary-button>
         </form>
     </x-auth-card>
-</x-guest-layout>
+</x-app-layout>
