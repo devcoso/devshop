@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->boolean('admin');
+        Schema::create('categorias', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre', 50);
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('admin');
-        });
+        Schema::dropIfExists('categorias');
     }
 };

@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('home') }}">
                         <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
                     </a>
                 </div>
@@ -14,7 +14,7 @@
                 @auth
                     @if (Auth::user()->admin === 1)
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        <x-nav-link :href="route('dashboard')" :active="request()->is('admin/*')">
                             {{ __('Admin') }}
                         </x-nav-link>
                     </div>
@@ -94,7 +94,7 @@
 
                 @if (Auth::user()->admin === 1)
                     <div class="pt-2 pb-3 space-y-1">
-                        <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        <x-responsive-nav-link :href="route('dashboard')" :active="request()->is('admin/*')">
                             {{ __('Admin') }}
                         </x-responsive-nav-link>
                     </div>
