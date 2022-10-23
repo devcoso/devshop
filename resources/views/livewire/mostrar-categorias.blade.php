@@ -2,8 +2,8 @@
     @forelse ($categorias as $categoria)
         <div class="p-6 border-gray-200 border-b flex flex-col md:flex-row md:justify-between md:items-center">
             <p class="text-xl font-bold text-gray-600">{{ $categoria->nombre}}</p>
-            <div class=" text-white">
-                <a href="{{ route('categorias.edit', $categoria->id) }}" class="bg-blue-600 py-1 px-2 rounded-sm hover:bg-blue-700">Editar</a>
+            <div class=" text-white flex">
+                <a href="{{ route('categorias.edit', $categoria->id) }}" class="bg-blue-600 py-1 px-2 rounded-sm mr-1 hover:bg-blue-700">Editar</a>
                 <button wire:click="$emit('mostrarAlerta', {{ $categoria->id }})" class="bg-red-600 py-1 px-2 rounded-lm hover:bg-red-700">Eliminar</button>
             </div>
         </div>

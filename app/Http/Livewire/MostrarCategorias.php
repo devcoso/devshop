@@ -15,7 +15,6 @@ class MostrarCategorias extends Component
         if(! Auth::user()->admin === 1) return;
 
         $categoria->delete();
-
     }
 
     public function render()

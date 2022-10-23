@@ -13,6 +13,7 @@ class Producto extends Model
         'descripcion',
         'imagen',
         'precio',
+        'cantidad',
         'categoria_id',
     ];
 }
